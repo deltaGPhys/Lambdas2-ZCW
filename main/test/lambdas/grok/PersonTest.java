@@ -19,7 +19,7 @@ public class PersonTest {
         person1 = new Person("Rowena", LocalDate.now().minusYears(15), Person.Sex.TRANS,"rowena@aol.com");
         person2 = new Person("Gary", LocalDate.now().minusYears(45), Person.Sex.MALE,"gary@aol.com");
         person3 = new Person("Autumn", LocalDate.now().minusYears(35), Person.Sex.INTERSEX,"autumn@aol.com");
-        person3 = new Person("Winter", LocalDate.now().minusYears(65), Person.Sex.FEMALE,"autumn2@aol.com");
+        person4 = new Person("Winter", LocalDate.now().minusYears(65), Person.Sex.FEMALE,"autumn2@aol.com");
     }
 
     @Test
