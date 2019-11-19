@@ -40,19 +40,11 @@ public class Person {
     }
 
     public static void printPersons(List<Person> roster) {
-        CheckPerson c = new CheckPerson () {
-            @Override
-            public boolean test(Person p) {
-                if (p.getAge() > 60) {
-                    return true;
-                }
-                return false;
-            }
-        };
-        for (Person p : roster) {
-            if (c.test(p)) {
+
+        roster.forEach(p -> {
+            if (p.getAge() > 60) {
                 p.printPerson();
             }
-        }
+        });
     }
 }
