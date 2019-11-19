@@ -39,10 +39,18 @@ public class Person {
         System.out.println(this.toString());
     }
 
-    public static void printPersons(
-            List<Person> roster, CheckPerson tester) {
+    public static void printPersons(List<Person> roster) {
+        CheckPerson c = new CheckPerson () {
+            @Override
+            public boolean test(Person p) {
+                if (p.getAge() > 60) {
+                    return true;
+                }
+                return false;
+            }
+        };
         for (Person p : roster) {
-            if (tester.test(p)) {
+            if (c.test(p)) {
                 p.printPerson();
             }
         }
